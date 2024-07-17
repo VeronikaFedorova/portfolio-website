@@ -79,11 +79,11 @@ nav.navbar.scrolled {
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 400;
-  color: var(--light-bg-color);
+  font-weight: 700;
+  color: rgb(255, 94, 148);
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 18px;
+  font-size: 24px;
   opacity: 0.75;
 }
 
@@ -630,6 +630,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   left: 0;
   z-index: 0;
   transition: 0.3s ease-in-out;
+  border-radius: 15px;
 }
 .contact form button:hover::before {
   width: 100%;
@@ -637,7 +638,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 30px 0 50px 0;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;

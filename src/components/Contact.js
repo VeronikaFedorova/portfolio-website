@@ -13,7 +13,7 @@ export const Contact = () => {
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
+  const [status, setStatus] = useState({status: true, message:''});
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -44,6 +44,7 @@ export const Contact = () => {
         setStatus({ success: true, message: 'Message sent successfully!' });
       })
       .catch((error) => {
+        console.error('EmailJS error:', error);
         setButtonText('Send');
         setStatus({
           success: false,
@@ -95,7 +96,7 @@ export const Contact = () => {
                     onChange={(e) => onFormUpdate('phone', e.target.value)}
                   />
                 </Col>
-                <Col className='message'>
+                <Col sm={12} className='message'>
                   <textarea
                     cols='10'
                     rows='6'
@@ -114,7 +115,7 @@ export const Contact = () => {
                         status.success === false ? 'danger' : 'success'
                       }
                     >
-                      (status.message)
+                      {status.message}
                     </p>
                   </Col>
                 )}
