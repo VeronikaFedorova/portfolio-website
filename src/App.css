@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
+  scrollbar-width: thin;
 }
 
 body {
@@ -70,11 +71,11 @@ nav.navbar {
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition: 0.32 ease-in-out;
+  transition: 0.32s ease-in-out;
 }
 
 nav.navbar.scrolled {
-  padding: 0;
+  padding: 20px 0;
   background-color: var(--dark-bg-color);
 }
 
@@ -260,6 +261,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
+  width: max-content;
 }
 
 .banner h1 {
@@ -295,7 +297,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   line-height: 1;
 }
 
@@ -369,11 +371,13 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
-  left: 0!important;
+  left: 0 !important;
 }
 
 /************ Projects Css ************/
 .project {
+  display: flex;
+  align-items: center;
   padding: 80px 0;
   position: relative;
   background-color: black;
@@ -555,18 +559,19 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 /************ Contact Css ************/
 
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   padding: 60px 0 200px 0;
 }
 .contact img {
   width: 92%;
 }
 .contact h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
   margin-bottom: 30px;
 }
-.contact form input, .contact form textarea {
+.contact form input,
+.contact form textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -589,16 +594,19 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   padding-right: 0;
 }
 
-.contact form input:focus, .contact form textarea:focus {
+.contact form input:focus,
+.contact form textarea:focus {
   background: rgba(255, 255, 255, 1);
   color: #121212;
 }
-.contact form input::placeholder, .contact form textarea::placeholder {
+.contact form input::placeholder,
+.contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
 }
-.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+.contact form input:focus::placeholder,
+.contact form textarea:focus::placeholder {
   color: #121212;
   opacity: 0.8;
 }
@@ -621,7 +629,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   color: #fff;
 }
 .contact form button::before {
-  content: "";
+  content: '';
   background: #121212;
   width: 0;
   height: 100%;
@@ -645,7 +653,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   background-repeat: no-repeat;
 }
 .newsletter-bx {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 55px;
   color: #121212;
   padding: 85px 125px;
@@ -667,8 +675,8 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   align-items: center;
 }
 .new-email-bx::before {
-  content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  content: '';
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -678,7 +686,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   right: -1px;
 }
 .new-email-bx::after {
-  content: "";
+  content: '';
   background: #fff;
   border-radius: 20px;
   position: absolute;
@@ -697,7 +705,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   padding: 0 15px;
 }
 .new-email-bx button {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   padding: 20px 65px;
   color: #fff;
   font-weight: 500;
@@ -710,7 +718,134 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .footer p {
   font-weight: 400;
   font-size: 14px;
-  color: #B8B8B8;
+  color: #b8b8b8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+/****** Responsive ********/
+@media screen and (max-width: 768px) {
+  .navbar-brand img {
+    height: 30px;
+  }
+
+  nav.navbar.scrolled {
+    padding: 10px 0;
+  }
+
+  .banner {
+    padding: 280px 100px 0;
+  }
+
+  .banner h1 {
+    font-size: 50px;
+  }
+
+  .banner .tagline {
+    font-size: 18px;
+  }
+
+  .banner p {
+    font-size: 16px;
+    color: var(--light-bg-color);
+  }
+
+  .banner img {
+    height: 250px;
+  }
+
+  .tab-content .row > * {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .footer img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav.navbar {
+    padding: 18px 40px;
+  }
+
+  .navbar-brand img {
+    height: 15px;
+  }
+
+  .navbar-text .vvd {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  span.navbar-text {
+    justify-content: center;
+  }
+
+  nav.navbar.scrolled {
+    padding: 10px 0;
+  }
+
+  .banner#home {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner {
+    padding: 260px 100px 0;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .banner .tagline {
+    font-size: 16px;
+  }
+
+  .banner p {
+    font-size: 16px;
+    color: var(--light-bg-color);
+  }
+
+  .banner img {
+    height: 200px;
+  }
+
+  .skill-bx p {
+    font-size: 16px;
+  }
+  
+  .react-multiple-carousel__arrow--left {
+    left: -10px!important;
+  }
+
+  .react-multiple-carousel__arrow--right {
+    right: -10px!important;
+  }
+  
+  .project {
+    height: max-content;
+  }
+
+  .contact {
+    padding: 60px 50px 100px;
+  }
+
+  .footer img {
+    width: 40%;
+  }
+
+  .footer .social-icon {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    width: 100%!important;
+  }
+
+  .footer .container div > div {
+    width: 50%;
+  } 
 }
