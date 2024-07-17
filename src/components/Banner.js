@@ -59,9 +59,9 @@ export const Banner = () => {
               My name is Veronika. I love coding and developing something
               beautiful and useful.
             </p>
-            <button onClick={() => console.log('connect')}>
+            <a href='#connect'>
               Let's connect <ArrowRightCircle size={25} />
-            </button>
+            </a>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt='Header img' height={400} />

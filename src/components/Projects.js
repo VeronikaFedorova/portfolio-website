@@ -11,13 +11,13 @@ export const Projects = () => {
       title: 'Freelance work',
       description: 'Design & Development',
       imgUrl: projImg1,
-      projectUrl: 'https://veronikafedorova.github.io/parallax-scroll/',
+      projectUrl: 'https://veronikafedorova.github.io/Halloween-website/',
     },
     {
       title: 'Samples of work',
       description: 'Design & Development',
       imgUrl: projImg2,
-      projectUrl: 'https://veronikafedorova.github.io/Halloween-website/',
+      projectUrl: 'https://veronikafedorova.github.io/parallax-scroll/',
     },
     {
       title: 'Business Startup',
