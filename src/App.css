@@ -281,9 +281,10 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   width: 96%;
 }
 
-.banner button {
+.banner a {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: var(--dark-bg-color);
   font-weight: 700;
   font-size: 20px;
@@ -292,16 +293,17 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   background: transparent;
   border: none;
   margin: 0 auto;
+  text-decoration: none;
 }
 
-.banner button svg {
+.banner a svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.2s ease-in-out;
   line-height: 1;
 }
 
-.banner button:hover svg {
+.banner a:hover svg {
   margin-left: 25px;
 }
 
