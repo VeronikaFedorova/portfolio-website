@@ -2,7 +2,7 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/VeronikaFedorova/portfolio-website",
+  "homepage": "https://github.com/VeronikaFedorova/portfolio-website/tree/gh-pages/",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@testing-library/jest-dom": "^5.17.0",
